@@ -24,7 +24,7 @@ do
     status="job_finished"
 
     # store job information 
-    ibmcloud schematics job get --id $job_id -j > scripts/job_info.json 
+    ibmcloud schematics job get --id $job_id -j > job_info.json 
     if [ $? == 0 ]; then
       echo "Created job information json file."
      else
