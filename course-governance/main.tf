@@ -38,15 +38,15 @@ resource "null_resource" "schematics_apply" {
 
   provisioner "local-exec" {
     when    = destroy
-    command = "rm -rf scripts/job_info.json"
+    command = "rm -rf ${path.module}/scripts/job_info.json"
   }
 
 }
 
 // Read job information
 data "local_file" "read_job" {
-  filename = "scripts/job_info.json"
-
+  filename = "${path.module}/scripts/job_info.json"
+  
   depends_on = [null_resource.schematics_apply]
 }
 
