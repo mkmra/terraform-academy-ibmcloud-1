@@ -12,7 +12,7 @@ provider "ibm" {
 
 
 module "course_governance" {
-  source = "./course-governance"
+  source                              = "./course-governance"
   ibmcloud_api_key                    = var.ibmcloud_api_key
   schematics_workspace_resource_group = var.schematics_workspace_resource_group
 
