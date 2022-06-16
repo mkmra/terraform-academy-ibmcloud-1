@@ -1,7 +1,3 @@
-provider "ibm" {
-  ibmcloud_api_key = var.ibmcloud_api_key
-}
-
 # 1. Create New Resource Group
 resource "ibm_resource_group" "resourceGroup" {
   name     = var.rg_name
