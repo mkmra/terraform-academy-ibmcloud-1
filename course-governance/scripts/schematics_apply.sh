@@ -22,11 +22,13 @@ do
   if [[ $(ibmcloud schematics job get --id $job_id -j | jq -r '.status.workspace_job_status.status_code') == *"job_finished"* ]]; then
     echo status = job_finished
     status="job_finished"
-
+    ls -la
+    cat job_info.json
     # store job information 
     ibmcloud schematics job get --id $job_id -j > job_info.json 
     if [ $? == 0 ]; then
       echo "Created job information json file."
+      exit $?
      else
       echo "Failed to get job information."
       exit $? 
