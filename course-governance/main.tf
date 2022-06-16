@@ -5,6 +5,11 @@ resource "ibm_schematics_workspace" "schematics_workspace_instance" {
   resource_group   = var.schematics_workspace_resource_group
   template_type    = "terraform_v0.13.5"
   template_git_url = var.schematics_workspace_template_repo
+  template_inputs {
+    name = "ibmcloud_api_key"
+    value = var.ibmcloud_api_key
+    type = "string"
+  }
 }
 
 // Provision resource
