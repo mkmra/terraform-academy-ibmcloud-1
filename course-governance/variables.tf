@@ -24,7 +24,7 @@ variable "schematics_workspace_resource_group" {
 variable "schematics_workspace_template_repo" {
   description = "Template repo to provision the cloud resource."
   type        = string
-  default     = "https://github.com/anilkumarnagaraj/sample.git"
+  default     = "https://github.ibm.com/Mujeebur-Rahman/terraform-academy-ibmcloud/tree/main/course-content"
 }
 
 variable "namespace" {
