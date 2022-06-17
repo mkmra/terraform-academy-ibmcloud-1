@@ -6,9 +6,9 @@
 module "course-setup" {
   source = "github.com/Cloud-Schematics/terraform-academy-ibmcloud//course-setup?ref=dev"
 
-  rg_name     = var.course_rg_name
-  accgrp_name = var.accgrp_name
-  invite_user_list   = var.invite_user_list
+  rg_name          = var.course_rg_name
+  accgrp_name      = var.accgrp_name
+  invite_user_list = var.invite_user_list
 }
 
 # Blockchain Platform - https://cloud.ibm.com/catalog/services/blockchain-platform

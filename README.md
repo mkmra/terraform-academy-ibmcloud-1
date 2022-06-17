@@ -2,11 +2,24 @@
 
 This Terraform example for IBM Cloud illustrates how to use setup the resources for training purpose and that can be de-provisioned after X mnts / Hrs using IBM Cloud Schematics.
 
+![plot](./images/schematics_governance.png?raw=true])
+
+## Use cases
+
+### 'Course Admin" usecases
+* Use the admin permissions in the Student's account, to provision the IBM Cloud services (as per the course content), in each Student account, 'course_content' resource group.
+* Use the admin permissions in the Student's account, to automatically destroy the course_content_resources; after 6 hours.
+* Use the admin permissions in the Student's account, to manually destroy & provision the course_content_resources.
+
+### "Students" usecases
+* Work with the course-content (watson-studio, machine-learning, etc..) provisioned in the 'course_content' resource group.
+* Will not be able to administer (create, delete, ..) the course-content resources.
+
 ## Instructions
 
 1. Login into Enterprise account. 
 2. Make sure that you are [assigned the correct permissions](https://cloud.ibm.com/docs/schematics?topic=schematics-access) to create workspaces and deploy resources.
-3. Create the Schematics provisioner workspace:
+3. Create the Schematics governance workspace:
     1. From the IBM Cloud menu select [Schematics](https://cloud.ibm.com/schematics/overview).
        - Click **Create workspace**.   
        - Enter a name for your workspace.   

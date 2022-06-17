@@ -9,8 +9,8 @@ module "rg_setup" {
 }
 
 module "iam_policy" {
-  source           = "./iam-access-policy"
+  source            = "./iam-access-policy"
   resource_group_id = module.rg_setup.resource_group_id
-  accgrp_name      = var.accgrp_name
-  invite_user_list        = var.invite_user_list
+  accgrp_name       = var.accgrp_name
+  invite_user_list  = var.invite_user_list
 }
