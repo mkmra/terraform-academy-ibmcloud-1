@@ -6,12 +6,12 @@ This Terraform example for IBM Cloud illustrates how to use setup the resources 
 
 ## Use cases
 
-### 'Course Admin" usecases
-* Use the admin permissions in the Student's account, to provision the IBM Cloud services (as per the course content), in each Student account, 'course_content' resource group.
-* Use the admin permissions in the Student's account, to automatically destroy the course_content_resources; after 6 hours.
-* Use the admin permissions in the Student's account, to manually destroy & provision the course_content_resources.
+### 'Course Admin' usecases
+* Use the course admin's account, to provision the IBM Cloud services (as per the course content), in each Student account, 'course_content' resource group.
+* Use the course admin's account, to automatically destroy the course_content_resources; after 6 hours.
+* Use the course admin's account, to manually destroy & provision the course_content_resources.
 
-### "Students" usecases
+### 'Students' usecases
 * Work with the course-content (watson-studio, machine-learning, etc..) provisioned in the 'course_content' resource group.
 * Will not be able to administer (create, delete, ..) the course-content resources.
 
