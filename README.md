@@ -96,4 +96,4 @@ module "course_governance" {
 |  job_id                    | Schematics workspace apply job Id                  |
 |  job_created_timer         | Schematics workspace resource created time         |
 |  job_decomission_timer     | schematics workspace resource de-provision time    |
-|  cron_expr                 | Cron expression for cloud function trigger alarm (UTC format) |
+|  cron_expr                 | Cron expression for cloud function to trigger alarm (UTC format) |
