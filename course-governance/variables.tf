@@ -1,7 +1,25 @@
+#####################################################
+# IBM Cloud - Terraform Academy Training
+# Copyright 2022 IBM
+#####################################################
+
+##########################################################
+# IBM Authentication Variables
+##########################################################
+
 variable "ibmcloud_api_key" {
   description = "IBM Cloud API key"
   type        = string
 }
+
+variable "schematics_workspace_resource_group" {
+  description = "The ID of the resource group where you want to provision the workspace."
+  type        = string
+}
+
+##########################################################
+# IBM Cloud Schematics Variables
+##########################################################
 
 variable "schematics_workspace_location" {
   description = "The location where you want to create your Schematics workspace and run Schematics actions. The location that you enter must match the API endpoint that you use. For example, if you use the Frankfurt API endpoint, you must specify `eu-de` as your location. If you use an API endpoint for a geography and you do not specify a location, Schematics determines the location based on availability."
@@ -15,16 +33,15 @@ variable "schematics_workspace_name" {
   default     = "vit-workspace"
 }
 
-variable "schematics_workspace_resource_group" {
-  description = "The ID of the resource group where you want to provision the workspace."
-  type        = string
-}
-
 variable "schematics_workspace_template_repo" {
   description = "Template repo to provision the cloud resource."
   type        = string
   default     = "https://github.ibm.com/Mujeebur-Rahman/terraform-academy-ibmcloud/tree/main/course-content"
 }
+
+##########################################################
+# IBM Cloud Functions Variables
+##########################################################
 
 variable "namespace" {
   description = "The name IAM based cloud function namespace."

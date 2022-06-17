@@ -1,5 +1,10 @@
+#####################################################
+# IBM Cloud - Terraform Academy Training
+# Copyright 2022 IBM
+#####################################################
+
 locals {
-  data  = jsondecode(data.local_file.read_job.content)
+  data = jsondecode(data.local_file.read_job.content)
 }
 
 locals {

@@ -1,3 +1,8 @@
+#####################################################
+# IBM Cloud - Terraform Academy Training
+# Copyright 2022 IBM
+#####################################################
+
 # Resource Group 
 variable "rg_name" {
   description = "Resource Groupr Name"
@@ -10,7 +15,6 @@ variable "ibmcloud_api_key" {
   description = "Student API key to provision services required for training."
   type        = string
 }
-
 
 # Common
 variable "location" {

@@ -1,3 +1,8 @@
+#####################################################
+# IBM Cloud - Terraform Academy Training
+# Copyright 2022 IBM
+#####################################################
+
 // Create schematics_workspace resource
 resource "ibm_schematics_workspace" "schematics_workspace_instance" {
   location         = var.schematics_workspace_location
@@ -6,9 +11,9 @@ resource "ibm_schematics_workspace" "schematics_workspace_instance" {
   template_type    = "terraform_v0.13.5"
   template_git_url = var.schematics_workspace_template_repo
   template_inputs {
-    name = "ibmcloud_api_key"
+    name  = "ibmcloud_api_key"
     value = var.ibmcloud_api_key
-    type = "string"
+    type  = "string"
   }
 }
 
@@ -38,15 +43,15 @@ resource "null_resource" "schematics_apply" {
 
   provisioner "local-exec" {
     when    = destroy
-    command = "rm -rf ${path.module}/scripts/job_info.json"
+    command = "rm -rf job_info.json"
   }
 
 }
 
 // Read job information
 data "local_file" "read_job" {
-  filename = "${path.module}/scripts/job_info.json"
-  
+  filename = "job_info.json"
+
   depends_on = [null_resource.schematics_apply]
 }
 
