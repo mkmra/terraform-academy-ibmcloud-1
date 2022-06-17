@@ -1,3 +1,8 @@
+#####################################################
+# IBM Cloud - Terraform Academy Training
+# Copyright 2022 IBM
+#####################################################
+
 terraform {
   required_providers {
     ibm = {
@@ -5,8 +10,4 @@ terraform {
       version = "1.42.0"
     }
   }
-}
-
-provider "ibm" {
-  ibmcloud_api_key = var.ibmcloud_api_key
 }

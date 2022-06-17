@@ -1,22 +1,25 @@
+#####################################################
+# IBM Cloud - Terraform Academy Training
+# Copyright 2022 IBM
+#####################################################
+
 data "ibm_resource_group" "resource-group" {
-   name = var.schematics_workspace_resource_group
+  name = var.schematics_workspace_resource_group
 }
 
 resource "ibm_function_namespace" "namespace" {
-   name                = var.namespace
-   resource_group_id   = data.ibm_resource_group.resource-group.id
+  name              = var.namespace
+  resource_group_id = data.ibm_resource_group.resource-group.id
 }
 
 resource "ibm_function_action" "action" {
   name      = var.action_name
   namespace = ibm_function_namespace.namespace.name
-  
+
   exec {
     kind = "python:3.9"
     code = file("${path.module}/scripts/main.py")
   }
-
-  depends_on = [data.local_file.read_job]
 }
 
 resource "ibm_function_trigger" "trigger" {
