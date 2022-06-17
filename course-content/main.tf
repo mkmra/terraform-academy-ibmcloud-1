@@ -4,7 +4,7 @@
 #####################################################
 
 module "course-setup" {
-  source = "github.com/mkmra/terraform-academy-ibmcloud//course-setup"
+  source = "github.com/Cloud-Schematics/terraform-academy-ibmcloud//course-setup"
 
   rg_name     = var.course_rg_name
   accgrp_name = var.accgrp_name
